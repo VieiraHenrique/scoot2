@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  overflow-x: hidden;
+  background: #ccc;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  @media screen and (min-width: 769px) {
+    padding: 0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  width: 180px;
+  height: 55px;
+  line-height: 53px;
+  text-align: center;
+  border: 2px solid $yellow;
+  background: $yellow;
+  color: $white;
+
+  &:hover {
+    background: transparent;
+    color: $yellow;
+  }
+}

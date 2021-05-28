@@ -1,0 +1,140 @@
+.header {
+  height: 65px;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $white;
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: $white;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background: url("/assets/icons/hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  input:checked ~ .header__menu {
+    left: 0;
+  }
+  input:checked ~ label {
+    background: url("/assets/icons/close.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    img {
+      width: 75px;
+    }
+  }
+
+  &__menu {
+    background: $blue-gray;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: -68vw;
+    width: 68vw;
+    height: 100vh;
+    padding: 135px 25px 0;
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      a {
+        font-family: "Space Mono";
+        font-weight: 600;
+        font-size: 18px;
+        color: $white;
+      }
+    }
+    .btn {
+      margin-bottom: 25px;
+      display: block;
+    }
+  }
+
+  &__cta {
+    display: none;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 96px;
+
+    label {
+      display: none;
+    }
+
+    &__logo {
+      img {
+        width: 107px;
+      }
+    }
+
+    &__menu {
+      all: unset;
+      display: flex;
+      ul {
+        all: unset;
+        list-style: none;
+        display: flex;
+        gap: 35px;
+
+        a {
+          color: $gray;
+        }
+      }
+
+      .btn {
+        display: none;
+      }
+    }
+
+    &__cta {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .container {
+      all: unset;
+      max-width: 1110px;
+      margin: 0 auto;
+      height: 100%;
+      gap: 60px;
+      background: $white;
+      display: flex;
+      align-items: center;
+    }
+    input {
+      display: none;
+    }
+    label {
+      display: none;
+    }
+    &__logo {
+      margin: 0;
+    }
+  }
+}
