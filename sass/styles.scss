@@ -8,7 +8,9 @@ $blue-gray: #333a44;
 $gray: #939caa;
 $gray-light: #e5ecf4;
 $gray-extra-light: #f2f5f9;
+$blue-gray-light: #e5ecf4;
 
 @import "partials/reset";
 @import "partials/header";
 @import "partials/hero";
+@import "partials/cards";
