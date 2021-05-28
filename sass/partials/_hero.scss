@@ -1,0 +1,117 @@
+.hero {
+  margin-top: 65px;
+  height: 650px;
+  background: url("/assets/patterns/right-arrow.svg"),
+    url("/assets/images/home-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  background-position: left -300px bottom 20px, center center;
+  color: $white;
+  text-align: center;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 125px;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-family: "Space Mono";
+    margin-bottom: 35px;
+  }
+
+  p {
+    color: $gray-light;
+    line-height: 1.4;
+    font-size: 15px;
+    max-width: 300px;
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+
+  /// TABLET
+
+  @media screen and (min-width: 768px) {
+    margin-top: 96px;
+    background: url("/assets/patterns/right-arrow.svg"),
+      url("/assets/patterns/white-circles.svg"),
+      url("/assets/images/home-hero-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: left -100px bottom 50px, right -30px bottom 50px,
+      center center;
+
+    h1 {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 480px;
+      line-height: 1.2;
+      margin-bottom: 40px;
+      font-size: 50px;
+    }
+
+    p {
+      max-width: 565px;
+      margin: 0 auto;
+      margin-bottom: 45px;
+    }
+  }
+
+  /// DESKTOP
+
+  @media screen and (min-width: 1024px) {
+    background: url("/assets/patterns/line.svg"),
+      url("/assets/patterns/white-circles.svg"),
+      url("/assets/patterns/right-arrow.svg"),
+      url("/assets/images/home-hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: left -30px bottom 265px, right -30px bottom 140px,
+      bottom 131px left 670px, center center;
+    text-align: left;
+    width: 100%;
+
+    .container {
+      display: block;
+    }
+
+    h1 {
+      max-width: 600px;
+      text-align: left;
+      margin: 0;
+      line-height: 1.1;
+      margin-bottom: 50px;
+      font-size: 55px;
+      padding-top: 35px;
+    }
+
+    p {
+      margin: 0;
+      width: 100%;
+      width: 405px;
+      margin-left: 60px;
+      margin-bottom: 45px;
+    }
+
+    .btn {
+      margin-left: 60px;
+    }
+  }
+
+  /// LARGE DESKTOP
+
+  @media screen and (min-width: 1441px) {
+    background: url("/assets/patterns/line.svg"),
+      url("/assets/patterns/white-circles.svg"),
+      url("/assets/patterns/right-arrow.svg"),
+      url("/assets/images/home-hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: left 200px bottom 265px, right 200px bottom 140px,
+      bottom 131px left 900px, center center;
+    background-size: auto, auto, auto, cover;
+    text-align: left;
+    width: 100%;
+  }
+}
